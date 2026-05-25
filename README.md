@@ -61,7 +61,9 @@ A production-grade encrypted Layer-2 overlay network architecture bridging a pub
 The platform establishes a secure Layer-2 broadcast domain over a public Layer-3 WAN by encapsulating **GRETAP (Generic Routing Encapsulation Ethernet Tap)** frames directly inside an hardened **WireGuard VPN** tunnel transport layer. 
 
 * 🌐 **Cloud Gateway Plane:** Public-facing VPS acting as a stateless ingestion proxy, routing incoming traffic securely through the encrypted overlay topology down to the internal network layers.
+<br>
 * 🔒 **Residential Edge Plane:** A multi-homed Linux routing environment running systemd-networkd/Netplan pipelines to safely ingest and map encapsulated virtual Ethernet interfaces without interrupting primary broadband default gateways.
+<br>
 * 🔌 **Reverse-VPN Broker Node:** Hardware-level integration of embedded Linux endpoints (Enigma2-based platforms) utilizing persistent reverse tunneling strategies to bypass remote firewall restrictions without requiring native port-forwarding structures on local routers.
 
 <br>
@@ -77,7 +79,9 @@ The platform establishes a secure Layer-2 broadcast domain over a public Layer-3
 <br>
 
 * ⚡ **MTU Tuning & Frame Fragmentation Mitigation** – Standard WAN frames default to 1500 bytes. Encapsulating Ethernet frames inside GRETAP (+24 bytes) and WireGuard (+60 bytes) introduces significant protocol overhead, leading to severe packet drops and broken TCP handshakes. This engineering deployment successfully isolates and resolves this via prescriptive clamping using a calculated transport MTU of **1420 bytes**, eliminating fragmentation loops.
+<br>
 * ⚙️ **Netplan & Systemd-Networkd Integration Constraints** – Standard Debian/Ubuntu network initialization routines often suffer from asynchronous race conditions where virtual overlay tunnels attempt to bind before physical interfaces attain an `UP` operational state. The topology resolves this via explicit interface ordering configurations, guaranteeing rock-solid tunnel persistence across system reboots.
+<br>
 * 🔄 **Asymmetric Routing Loop Elimination** – Direct state traffic entering the cloud VPS boundary risked routing loops when replies attempted to exit through the local residential ISP interface instead of returning back via the tunnel gateway. Implemented precise custom `iptables` Network Address Translation (NAT) structures combined with policy-based routing to enforce strict return path symmetric symmetry.
 
 <br>
