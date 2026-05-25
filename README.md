@@ -96,32 +96,39 @@ The platform establishes a secure Layer-2 broadcast domain over a public Layer-3
 
 ## 🔬 Project Documentation & Engineering Reports
 
-The entire planning, deployment matrix, and troubleshooting process has been documented across three independent engineering blueprints. You can access the technical PDF reports directly within this repository:
+The entire planning, deployment matrix, and troubleshooting process has been documented across four independent engineering blueprints. You can access the technical PDF reports directly within this repository:
 
 <br>
 
-### 📄 1. Core Overlay Engineering Architecture Blueprint
+### 📄 1. Foundational Layer: Secure TCP Service Exposure Blueprint
+* **Description:** Initial architectural prototype demonstrating secure NAT traversal. Maps incoming connection states on public VPS ports using strict Destination NAT (DNAT) and forwards traffic down to point-to-point WireGuard endpoints on isolated embedded Linux targets.
+<br>
+
+* 👉 [Download Secure TCP Service Exposure Report (PDF)](./Secure_TCP_WireGuard_Project_EN_ENTERPRISE.pdf)
+
+<br>
+
+### 📄 2. Core Overlay Engineering Architecture Blueprint
 * **Description:** The foundational design specification for the L2 over L3 deployment. Contains extensive configuration definitions, MTU analysis, transport headers decomposition, and deployment guidelines for FTTH residential perimeters.
 <br>
 
-* 👉 [Download Core Architecture Report (PDF)](./documentation/Hybrid%20L2%20Overlay%20Network%20for%20Residential%20FTTH%20using%20WireGuard.pdf)
+* 👉 [Download Core Architecture Report (PDF)](./Hybrid%20L2%20Overlay%20Network%20for%20Residential%20FTTH%20using%20WireGuard.pdf)
 
 <br>
 
-### 📄 2. Edge Node Secure Reverse VPN Specification
+### 📄 3. Edge Node Secure Reverse VPN Specification
 * **Description:** Implementation deployment guidelines for extending the secure network overlay onto resource-constrained legacy or embedded Linux environments (Octagon architectures) to ensure stateless command-and-control access over restrictive double-NAT topologies.
 <br>
 
-* 👉 [Download Reverse VPN Report (PDF)](./documentation/Secure_Reverse_VPN_Project_2026.pdf)
+* 👉 [Download Reverse VPN Report (PDF)](./Secure_Reverse_VPN_Project_2026.pdf)
 
 <br>
 
-### 📄 3. Network Verification & Advanced Troubleshooting Log
+### 📄 4. Network Verification & Advanced Troubleshooting Log
 * **Description:** Real-world incident log documenting network interface edge-cases, systemd race-condition diagnostic traces, asymmetric policy routing verification, and final link stability sign-off validation protocols.
 <br>
 
-* 👉 [Download Troubleshooting & Verification Report (PDF)](./documentation/overlay-project.pdf)
-
+* 👉 [Download Troubleshooting & Verification Report (PDF)](./overlay-project.pdf)
 <br>
 <br>
 <br>
