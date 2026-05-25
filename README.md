@@ -104,7 +104,7 @@ The entire planning, deployment matrix, and troubleshooting process has been doc
 * **Description:** Initial architectural prototype demonstrating secure NAT traversal. Maps incoming connection states on public VPS ports using strict Destination NAT (DNAT) and forwards traffic down to point-to-point WireGuard endpoints on isolated embedded Linux targets.
 <br>
 
-* 👉 [Download Secure TCP Service Exposure Report (PDF)](./Secure_TCP_WireGuard_Project_EN_ENTERPRISE.pdf)
+* 👉 [Download Secure TCP Service Exposure Report (PDF)](./documentation/Secure_TCP_WireGuard_Project_EN_ENTERPRISE.pdf)
 
 <br>
 
@@ -112,7 +112,7 @@ The entire planning, deployment matrix, and troubleshooting process has been doc
 * **Description:** The foundational design specification for the L2 over L3 deployment. Contains extensive configuration definitions, MTU analysis, transport headers decomposition, and deployment guidelines for FTTH residential perimeters.
 <br>
 
-* 👉 [Download Core Architecture Report (PDF)](./Hybrid%20L2%20Overlay%20Network%20for%20Residential%20FTTH%20using%20WireGuard.pdf)
+* 👉 [Download Core Architecture Report (PDF)](./documentation/Hybrid%20L2%20Overlay%20Network%20for%20Residential%20FTTH%20using%20WireGuard.pdf)
 
 <br>
 
@@ -120,7 +120,7 @@ The entire planning, deployment matrix, and troubleshooting process has been doc
 * **Description:** Implementation deployment guidelines for extending the secure network overlay onto resource-constrained legacy or embedded Linux environments (Octagon architectures) to ensure stateless command-and-control access over restrictive double-NAT topologies.
 <br>
 
-* 👉 [Download Reverse VPN Report (PDF)](./Secure_Reverse_VPN_Project_2026.pdf)
+* 👉 [Download Reverse VPN Report (PDF)](./documentation/Secure_Reverse_VPN_Project_2026.pdf)
 
 <br>
 
@@ -128,7 +128,7 @@ The entire planning, deployment matrix, and troubleshooting process has been doc
 * **Description:** Real-world incident log documenting network interface edge-cases, systemd race-condition diagnostic traces, asymmetric policy routing verification, and final link stability sign-off validation protocols.
 <br>
 
-* 👉 [Download Troubleshooting & Verification Report (PDF)](./overlay-project.pdf)
+* 👉 [Download Troubleshooting & Verification Report (PDF)](./documentation/overlay-project.pdf)
 <br>
 <br>
 <br>
