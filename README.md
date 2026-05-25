@@ -13,6 +13,49 @@ A production-grade encrypted Layer-2 overlay network architecture bridging a pub
 <br>
 <br>
 
+## 🛠️ Infrastructure Architecture & Multi-Layer Topology
+
+```text
++---------------------------------------------------------------+
+|                        PHYSICAL LAYER                         |
+|                                                               |
+|    Proxmox Host ---------------- Internet ---------------- VPS|
++---------------------------------------------------------------+
+                               │
+                               ▼
++---------------------------------------------------------------+
+|                         L3 TRANSPORT                          |
+|                                                               |
+|          WireGuard Tunnel (UDP/51820, 10.77.77.x/24)          |
+|    Proxmox: 10.77.77.x <==== encrypted ====> VPS: 10.77.77.x  |
++---------------------------------------------------------------+
+                               │
+                               ▼
++---------------------------------------------------------------+
+|                       L2 ENCAPSULATION                        |
+|                                                               |
+|    gretap-overlay <==== Ethernet-over-WireGuard ====> gretap  |
++---------------------------------------------------------------+
+                               │
+                               ▼
++---------------------------------------------------------------+
+|                      L2 BROADCAST DOMAIN                      |
+|                                                               |
+|    vmbr-overlay <========== BRIDGE ==========> br-overlay     |
+|    Proxmox: 10.50.0.x/24                  VPS: 10.50.0.x/24   |
++---------------------------------------------------------------+
+                               │
+                               ▼
++---------------------------------------------------------------+
+|                       VIRTUAL MACHINES                        |
+|                                                               |
+|    VM / LXC Containers (10.50.0.x) behave as if local to VPS  |
++---------------------------------------------------------------+
+```
+<br>
+<br>
+<br>
+
 ## 🛠️ Core Infrastructure Architecture
 
 The platform establishes a secure Layer-2 broadcast domain over a public Layer-3 WAN by encapsulating **GRETAP (Generic Routing Encapsulation Ethernet Tap)** frames directly inside an hardened **WireGuard VPN** tunnel transport layer. 
