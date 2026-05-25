@@ -1,9 +1,3 @@
-<p align="center">
-  <img src="architecture_diagram.png" width="750" alt="Enterprise Residential Overlay Network Architecture">
-</p>
-
-<br>
-<br>
 
 # Hybrid Layer-2 Overlay Network for Residential FTTH Infrastructure
 
