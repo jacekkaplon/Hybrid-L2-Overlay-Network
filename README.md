@@ -61,9 +61,13 @@ A production-grade encrypted Layer-2 overlay network architecture bridging a pub
 The platform establishes a secure Layer-2 broadcast domain over a public Layer-3 WAN by encapsulating **GRETAP (Generic Routing Encapsulation Ethernet Tap)** frames directly inside an hardened **WireGuard VPN** tunnel transport layer. 
 
 * 🌐 **Cloud Gateway Plane:** Public-facing VPS acting as a stateless ingestion proxy, routing incoming traffic securely through the encrypted overlay topology down to the internal network layers.
+
 <br>
+
 * 🔒 **Residential Edge Plane:** A multi-homed Linux routing environment running systemd-networkd/Netplan pipelines to safely ingest and map encapsulated virtual Ethernet interfaces without interrupting primary broadband default gateways.
+
 <br>
+
 * 🔌 **Reverse-VPN Broker Node:** Hardware-level integration of embedded Linux endpoints (Enigma2-based platforms) utilizing persistent reverse tunneling strategies to bypass remote firewall restrictions without requiring native port-forwarding structures on local routers.
 
 <br>
